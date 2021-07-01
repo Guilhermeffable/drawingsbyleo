@@ -1,0 +1,7 @@
+type Drawing @model {
+    id: ID!
+    name: String!
+    description: String
+    image: String
+    key: String
+}
