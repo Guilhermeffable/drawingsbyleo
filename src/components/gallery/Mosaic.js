@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { getImages } from '../../actions/galleryActions';
-import Image from './Image';
+import ImageModal from './ImageModal';
 import PropTypes from 'prop-types';
+import M from 'materialize-css/dist/js/materialize.min.js';
 import _ from 'lodash';
 
 const Mosaic = ({ gallery: { urls }, getImages }) => {
     useEffect(() => {
         getImages();
-
-        // eslint-disable-next-line
     }, []);
 
     const images = [];
@@ -25,8 +24,7 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
         });
     }
 
-    console.log(_.chunk(images, 3));
-
+    //split the main array into an array of 4 images arrays
     const imgArray = _.chunk(images, 4);
 
     return (
@@ -36,11 +34,7 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
                     imgArray.map((img) => (
                         <div className='column-mosaic'>
                             {img.map((item) => (
-                                <img
-                                    className='drawing'
-                                    src={item.src}
-                                    alt=''
-                                />
+                                <ImageModal url={item.src} />
                             ))}
                         </div>
                     ))}

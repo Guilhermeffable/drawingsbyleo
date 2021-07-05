@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
+import CMS from './CMS';
 import About from './About';
 import MyGallery from './MyGallery';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -16,6 +17,7 @@ const Main = ({ gallery: { isHome } }) => {
                         <Navbar />
                         <Switch>
                             <Route exact path='/' component={Home} />
+                            <Route exact path='/cms' component={CMS} />
                             <Route exact path='/about' component={About} />
                             <Route
                                 exact

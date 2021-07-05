@@ -1,92 +1,77 @@
-import React, { useEffect } from 'react';
-import UploadForm from '../cms/UploadForm';
-import ImageItem from '../cms/ImageItem';
-import { connect } from 'react-redux';
-import { getImages, clearAll } from '../../actions/galleryActions';
-import { motion } from 'framer-motion';
-import PropTypes from 'prop-types';
-import {
-    AmplifySignIn,
-    AmplifyAuthenticator,
-    AmplifySignUp,
-    AmplifyGreetings
-} from '@aws-amplify/ui-react';
+import React from 'react';
+import { Fragment } from 'react';
+import Footer from '../layout/Footer';
 
-import { Auth } from 'aws-amplify';
-
-const About = ({ gallery: { urls, loading }, getImages, clearAll }) => {
-    useEffect(() => {
-        getImages();
-    }, []);
-
-    const onSignOut = async () => {
-        console.log('sign out');
-        try {
-            await Auth.signOut({ global: true });
-        } catch (error) {
-            console.log('error signing out: ', error);
-        }
-    };
-
-    const onClearAll = () => {
-        clearAll();
-    };
-
+const About = () => {
     return (
-        <AmplifyAuthenticator>
-            <AmplifySignIn slot='sign-in'>
-                <div slot='secondary-footer-content'></div>
-            </AmplifySignIn>
-
+        <Fragment>
             <div className='container'>
-                <AmplifyGreetings>
-                    <div slot='greetings-message' className='container'>
-                        Hello Nocas
+                <h2 className='about-title'>About Me</h2>
+                <div className='row about-section'>
+                    <div className='col s6'>
+                        <img
+                            className='about-picture'
+                            src={
+                                process.env.PUBLIC_URL +
+                                '/images/about-picture.jpg'
+                            }
+                        />
                     </div>
-                </AmplifyGreetings>
-                <div
-                    className='btn'
-                    style={{ backgroundColor: 'rgba(232, 185, 185)' }}
-                >
-                    <span onClick={onClearAll}>Clear All</span>
+                    <div className='col s6 '>
+                        <h5 className='about-subtitle'>Who am I?</h5>
+                        <p className='about-description'>
+                            I'm Leonor, a Pharmaceutical Sciences student from
+                            Leiria, Portugal.
+                        </p>
+                    </div>
                 </div>
-                <div className='grid-2'>
-                    {(!loading && urls === null) ||
-                    (urls.length === 0 && urls.length === 0) ? (
-                        <h5>No images to show...</h5>
-                    ) : (
-                        <motion.ul className='collection' layout>
-                            {urls !== null &&
-                                urls.map((url) => (
-                                    <li
-                                        key={url.id}
-                                        className='collection-item'
-                                    >
-                                        <div>
-                                            <ImageItem data={url} />
-                                        </div>
-                                    </li>
-                                ))}
-                        </motion.ul>
-                    )}
-
-                    <div>
-                        <UploadForm />
+                <div className='row about-section'>
+                    <div className='col s6'>
+                        <h5 className='about-subtitle'>
+                            My passion for drawing
+                        </h5>
+                        <p className='about-description'>
+                            Ever since I was little I always enjoyed drawing, I
+                            even considered pursuing it as a career. So I
+                            decided to build this blog to share with you some of
+                            my drawings.
+                        </p>
+                    </div>
+                    <div className='col s6 '>
+                        <img
+                            className='about-picture'
+                            src={
+                                process.env.PUBLIC_URL +
+                                '/images/desenho_2.jpeg'
+                            }
+                        />
+                    </div>
+                </div>
+                <div className='row about-section'>
+                    <div className='col s6'>
+                        <img
+                            className='about-picture'
+                            src={
+                                process.env.PUBLIC_URL +
+                                '/images/desenho_12.jpeg'
+                            }
+                        />
+                    </div>
+                    <div className='col s6 '>
+                        <h5 className='about-subtitle'>
+                            What can you do to contact me?
+                        </h5>
+                        <p className='about-description'>
+                            You can always reach me through my social media with
+                            requests, you can send me a photo and I'll send you
+                            a drawing version of that photo.
+                        </p>
                     </div>
                 </div>
             </div>
-        </AmplifyAuthenticator>
+            <Footer />
+        </Fragment>
     );
 };
 
-const mapStateToProps = (state) => ({
-    gallery: state.gallery
-});
-
-About.propTypes = {
-    urls: PropTypes.array,
-    loading: PropTypes.bool,
-    getImages: PropTypes.func.isRequired
-};
-
-export default connect(mapStateToProps, { getImages, clearAll })(About);
+export default About;

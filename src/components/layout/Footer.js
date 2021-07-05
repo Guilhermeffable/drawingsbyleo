@@ -6,33 +6,54 @@ const Footer = () => {
             <div class='container'>
                 <div class='row'>
                     <div class='col l6 s12'>
-                        <h5 class='white-text'>Footer Content</h5>
+                        <h5 class='white-text footer-title'>Contacts</h5>
                         <p class='grey-text text-lighten-4'>
-                            You can use rows and columns here to organize your
-                            footer content.
+                            You can contact me via my e-mail:
+                            <a
+                                className='email-footer'
+                                href='mailto:leonor.rms01@gmail.com? subject=Drawing Request'
+                            >
+                                leonor.rms01@gmail.com
+                            </a>
                         </p>
                     </div>
                     <div class='col l4 offset-l2 s12'>
-                        <h5 class='white-text'>Links</h5>
+                        <h5 class='white-text footer-title'>Social Media</h5>
                         <ul>
                             <li>
-                                <a class='grey-text text-lighten-3' href='#!'>
-                                    Facebook
+                                <a
+                                    className='social-media-link'
+                                    href='https://www.facebook.com/leonor.solla'
+                                    target='_blank'
+                                >
+                                    <i class='fab fa-facebook'></i>
+                                    <span className='social-media-link-icon'>
+                                        Facebook
+                                    </span>
                                 </a>
                             </li>
                             <li>
-                                <a class='grey-text text-lighten-3' href='#!'>
-                                    Twitter
+                                <a
+                                    className='social-media-link'
+                                    href='https://twitter.com/leonor_solla'
+                                    target='_blank'
+                                >
+                                    <i class='fab fa-twitter'></i>
+                                    <span className='social-media-link-icon'>
+                                        Twitter
+                                    </span>
                                 </a>
                             </li>
                             <li>
-                                <a class='grey-text text-lighten-3' href='#!'>
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a class='grey-text text-lighten-3' href='#!'>
-                                    LinkedIn
+                                <a
+                                    className='social-media-link'
+                                    href='https://www.instagram.com/leonor_solla/'
+                                    target='_blank'
+                                >
+                                    <i class='fab fa-instagram'></i>
+                                    <span className='social-media-link-icon'>
+                                        Instagram
+                                    </span>
                                 </a>
                             </li>
                         </ul>
