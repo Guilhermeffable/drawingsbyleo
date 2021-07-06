@@ -67,7 +67,7 @@ const Home = ({ hideHome, showHome }) => {
                 className='valign-wrapper center-align'
                 style={{ width: '100%', height: '100%', position: 'absolute' }}
             >
-                <div className='container'>
+                <div className='home-container container'>
                     <div className='row'>
                         <div className='col s12 m6 offset-m3'>
                             <h1 className='home-title'>Drawings by Leo</h1>

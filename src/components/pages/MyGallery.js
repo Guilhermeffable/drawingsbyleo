@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import Mosaic from '../gallery/Mosaic';
+import MosaicMobile from '../gallery/MosaicMobile';
 import Footer from '../layout/Footer';
 
 const MyGallery = () => {
@@ -24,7 +25,7 @@ const MyGallery = () => {
                     </div>
                 </div>
                 <div className='section'>
-                    <div className='row container' id='text-wrapper'>
+                    <div className='container' id='text-wrapper'>
                         <h1>Gallery</h1>
                     </div>
                 </div>
@@ -55,6 +56,7 @@ const MyGallery = () => {
                 </section>
                 <hr class='section-break-5' />
                 <Mosaic />
+                <MosaicMobile />
                 <hr class='section-break-5' />
                 <Footer />
             </div>

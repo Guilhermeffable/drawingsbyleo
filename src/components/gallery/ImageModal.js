@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 import Backdrop from '@material-ui/core/Backdrop';
+import { motion } from 'framer-motion';
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -33,11 +34,13 @@ const ImageModal = ({ url }) => {
 
     return (
         <div>
-            <img
+            <motion.img
                 src={url}
                 onClick={handleOpen}
                 className='drawing hoverable'
                 alt='Not found'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.8 }}
             />
 
             <Modal

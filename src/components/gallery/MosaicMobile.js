@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import _ from 'lodash';
 
-const Mosaic = ({ gallery: { urls }, getImages }) => {
+const MosaicMobile = ({ gallery: { urls }, getImages }) => {
     useEffect(() => {
         getImages();
     }, []);
@@ -28,17 +28,15 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
     const imgArray = _.chunk(images, 4);
 
     return (
-        <section id='mosaic-section ' className='hide-on-small-only'>
-            <div className='row-mosaic'>
-                {imgArray !== null &&
-                    imgArray.map((img) => (
-                        <div className='column-mosaic'>
-                            {img.map((item) => (
-                                <ImageModal url={item.src} />
-                            ))}
-                        </div>
-                    ))}
-            </div>
+        <section id='mosaic-section' className='hide-on-med-and-up'>
+            {imgArray !== null &&
+                imgArray.map((img) => (
+                    <div className='img-mobile'>
+                        {img.map((item) => (
+                            <ImageModal url={item.src} />
+                        ))}
+                    </div>
+                ))}
         </section>
     );
 };
@@ -47,8 +45,8 @@ const mapStateToProps = (state) => ({
     gallery: state.gallery
 });
 
-Mosaic.propTypes = {
+MosaicMobile.propTypes = {
     getImages: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, { getImages })(Mosaic);
+export default connect(mapStateToProps, { getImages })(MosaicMobile);

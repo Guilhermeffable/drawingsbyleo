@@ -63,8 +63,8 @@ const About = () => {
                         </h5>
                         <p className='about-description'>
                             You can always reach me through my social media with
-                            requests, you can send me a photo and I'll send you
-                            a drawing version of that photo.
+                            requests or you can send me a photo and I'll send
+                            you a drawing version of that photo.
                         </p>
                     </div>
                 </div>
