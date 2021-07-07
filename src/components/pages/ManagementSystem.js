@@ -8,25 +8,15 @@ import PropTypes from 'prop-types';
 import {
     AmplifySignIn,
     AmplifyAuthenticator,
-    AmplifySignUp,
     AmplifyGreetings
 } from '@aws-amplify/ui-react';
-
-import { Auth } from 'aws-amplify';
 
 const Cms = ({ gallery: { urls, loading }, getImages, clearAll }) => {
     useEffect(() => {
         getImages();
-    }, []);
 
-    const onSignOut = async () => {
-        console.log('sign out');
-        try {
-            await Auth.signOut({ global: true });
-        } catch (error) {
-            console.log('error signing out: ', error);
-        }
-    };
+        //eslint-disable-next-line
+    }, []);
 
     const onClearAll = () => {
         clearAll();

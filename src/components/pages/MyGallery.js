@@ -22,6 +22,7 @@ const MyGallery = () => {
                                 process.env.PUBLIC_URL +
                                 '/images/background-text-wrapper.jpg'
                             }
+                            alt='Not found'
                         />
                     </div>
                 </div>
@@ -37,6 +38,7 @@ const MyGallery = () => {
                                 process.env.PUBLIC_URL +
                                 '/images/background-text-wrapper.jpg'
                             }
+                            alt='Not found'
                         />
                     </div>
                 </div>
@@ -54,10 +56,10 @@ const MyGallery = () => {
                         <h1>My drawings</h1>
                     </div>
                 </section>
-                <hr class='section-break-5' />
+                <hr className='section-break-5' />
                 <Mosaic />
                 <MosaicMobile />
-                <hr class='section-break-5' />
+                <hr className='section-break-5' />
                 <Footer />
             </div>
         </Fragment>

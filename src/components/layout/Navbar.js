@@ -27,7 +27,7 @@ const Navbar = ({ showHome }) => {
                                 Drawings by Leo
                             </span>
                             <a
-                                href='#'
+                                href='!#'
                                 data-target='mobile-demo'
                                 className='sidenav-trigger'
                             >

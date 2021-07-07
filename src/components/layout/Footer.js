@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class='page-footer black'>
-            <div class='container'>
-                <div class='row'>
-                    <div class='col l6 s12 hide-on-small-only'>
-                        <h5 class='white-text footer-title'>Contacts</h5>
-                        <p class='grey-text text-lighten-4'>
+        <footer className='page-footer black'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col l6 s12 hide-on-small-only'>
+                        <h5 className='white-text footer-title'>Contacts</h5>
+                        <p className='grey-text text-lighten-4'>
                             You can contact me via my e-mail:
                             <a
                                 className='email-footer'
@@ -17,16 +17,17 @@ const Footer = () => {
                             </a>
                         </p>
                     </div>
-                    <div class='col l4 offset-l2 s12'>
-                        <h5 class='white-text footer-title'>Social Media</h5>
+                    <div className='col l4 offset-l2 s12'>
+                        <h5 className='white-text footer-title'>
+                            Social Media
+                        </h5>
                         <ul className='social-media-footer'>
                             <li>
                                 <a
                                     className='social-media-link'
                                     href='https://www.facebook.com/leonor.solla'
-                                    target='_blank'
                                 >
-                                    <i class='fab fa-facebook'></i>
+                                    <i className='fab fa-facebook'></i>
                                     <span className='social-media-link-icon'>
                                         Facebook
                                     </span>
@@ -36,9 +37,8 @@ const Footer = () => {
                                 <a
                                     className='social-media-link'
                                     href='https://twitter.com/leonor_solla'
-                                    target='_blank'
                                 >
-                                    <i class='fab fa-twitter'></i>
+                                    <i className='fab fa-twitter'></i>
                                     <span className='social-media-link-icon'>
                                         Twitter
                                     </span>
@@ -48,9 +48,8 @@ const Footer = () => {
                                 <a
                                     className='social-media-link'
                                     href='https://www.instagram.com/leonor_solla/'
-                                    target='_blank'
                                 >
-                                    <i class='fab fa-instagram'></i>
+                                    <i className='fab fa-instagram'></i>
                                     <span className='social-media-link-icon'>
                                         Instagram
                                     </span>
@@ -60,10 +59,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div class='footer-copyright'>
-                <div class='container'>
+            <div className='footer-copyright'>
+                <div className='container'>
                     © 2021 Copyright Guilherme Luís
-                    <a class='grey-text text-lighten-4 right' href='#!'>
+                    <a className='grey-text text-lighten-4 right' href='#!'>
                         More Links
                     </a>
                 </div>

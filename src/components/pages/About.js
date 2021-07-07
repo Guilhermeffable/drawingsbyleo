@@ -15,6 +15,7 @@ const About = () => {
                                 process.env.PUBLIC_URL +
                                 '/images/about-picture.jpg'
                             }
+                            alt='Not found'
                         />
                     </div>
                     <div className='col s6 '>
@@ -44,6 +45,7 @@ const About = () => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_2.jpeg'
                             }
+                            alt='Not found'
                         />
                     </div>
                 </div>
@@ -55,6 +57,7 @@ const About = () => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_12.jpeg'
                             }
+                            alt='Not found'
                         />
                     </div>
                     <div className='col s6 '>

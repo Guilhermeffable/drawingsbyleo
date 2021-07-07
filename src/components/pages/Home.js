@@ -35,6 +35,7 @@ const Home = ({ hideHome, showHome }) => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_2.jpeg'
                             }
+                            alt='Not found'
                         />
                     </li>
                     <li>
@@ -43,6 +44,7 @@ const Home = ({ hideHome, showHome }) => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_11.jpeg'
                             }
+                            alt='Not found'
                         />
                     </li>
                     <li>
@@ -51,6 +53,7 @@ const Home = ({ hideHome, showHome }) => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_8.jpeg'
                             }
+                            alt='Not found'
                         />
                     </li>
                     <li>
@@ -59,6 +62,7 @@ const Home = ({ hideHome, showHome }) => {
                                 process.env.PUBLIC_URL +
                                 '/images/desenho_9.jpeg'
                             }
+                            alt='Not found'
                         />
                     </li>
                 </ul>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getImages } from '../../actions/galleryActions';
 import ImageModal from './ImageModal';
@@ -8,6 +8,8 @@ import _ from 'lodash';
 const Mosaic = ({ gallery: { urls }, getImages }) => {
     useEffect(() => {
         getImages();
+
+        //eslint-disable-next-line
     }, []);
 
     const images = [];
@@ -18,7 +20,8 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
                 src: url.image,
                 thumbnail: url.image,
                 width: '1024',
-                height: '768'
+                height: '768',
+                id: url.id
             });
         });
     }
@@ -30,10 +33,10 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
         <section id='mosaic-section' className='hide-on-small-only'>
             <div className='row-mosaic'>
                 {imgArray !== null &&
-                    imgArray.map((img) => (
-                        <div className='column-mosaic'>
+                    imgArray.map((img, index) => (
+                        <div className='column-mosaic' key={index}>
                             {img.map((item) => (
-                                <ImageModal url={item.src} />
+                                <ImageModal url={item.src} key={item.id} />
                             ))}
                         </div>
                     ))}
