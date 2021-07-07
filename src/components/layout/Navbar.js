@@ -7,11 +7,13 @@ import { showHome } from '../../actions/galleryActions';
 
 const Navbar = ({ showHome }) => {
     useEffect(() => {
+        //initialize sidenanv
         const sidenav = document.querySelector('.sidenav');
         M.Sidenav.init(sidenav);
     }, []);
 
     const onClick = () => {
+        //show the Home component only
         showHome();
     };
 

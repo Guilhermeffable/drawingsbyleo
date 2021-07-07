@@ -6,6 +6,7 @@ import Footer from '../layout/Footer';
 
 const MyGallery = () => {
     useEffect(() => {
+        //initialize parallax
         const parallax = document.querySelectorAll('.parallax');
         M.Parallax.init(parallax);
         // eslint-disable-next-line

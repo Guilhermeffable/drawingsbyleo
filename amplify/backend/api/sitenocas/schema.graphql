@@ -1,4 +1,4 @@
-type Drawing @model {
+type Drawing @model @aws_api_key {
     id: ID!
     name: String!
     description: String

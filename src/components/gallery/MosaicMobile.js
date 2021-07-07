@@ -13,6 +13,7 @@ const MosaicMobile = ({ gallery: { urls }, getImages }) => {
 
     const images = [];
 
+    //iterate through the array of images and push an Image object to the images array
     if (urls !== null && urls.length !== 0) {
         urls.map((url, index) => {
             images.push({
