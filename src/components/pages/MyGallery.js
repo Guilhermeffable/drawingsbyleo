@@ -39,7 +39,6 @@ const MyGallery = () => {
                         />
                     </div>
                 </div>
-
                 <div className='fixed-action-btn '>
                     <a
                         href='#mosaic-section'

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { getImages } from '../../actions/galleryActions';
 import ImageModal from './ImageModal';
 import PropTypes from 'prop-types';
-import M from 'materialize-css/dist/js/materialize.min.js';
 import _ from 'lodash';
 
 const Mosaic = ({ gallery: { urls }, getImages }) => {
@@ -28,7 +27,7 @@ const Mosaic = ({ gallery: { urls }, getImages }) => {
     const imgArray = _.chunk(images, 4);
 
     return (
-        <section id='mosaic-section ' className='hide-on-small-only'>
+        <section id='mosaic-section' className='hide-on-small-only'>
             <div className='row-mosaic'>
                 {imgArray !== null &&
                     imgArray.map((img) => (

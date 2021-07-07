@@ -5,7 +5,7 @@ const Footer = () => {
         <footer class='page-footer black'>
             <div class='container'>
                 <div class='row'>
-                    <div class='col l6 s12'>
+                    <div class='col l6 s12 hide-on-small-only'>
                         <h5 class='white-text footer-title'>Contacts</h5>
                         <p class='grey-text text-lighten-4'>
                             You can contact me via my e-mail:
@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                     <div class='col l4 offset-l2 s12'>
                         <h5 class='white-text footer-title'>Social Media</h5>
-                        <ul>
+                        <ul className='social-media-footer'>
                             <li>
                                 <a
                                     className='social-media-link'
