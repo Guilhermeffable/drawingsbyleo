@@ -83,7 +83,7 @@ const mapStateToProps = (state) => ({
     gallery: state.gallery
 });
 
-CMS.propTypes = {
+Cms.propTypes = {
     urls: PropTypes.array,
     loading: PropTypes.bool,
     getImages: PropTypes.func.isRequired
