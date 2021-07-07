@@ -14,7 +14,7 @@ import {
 
 import { Auth } from 'aws-amplify';
 
-const CMS = ({ gallery: { urls, loading }, getImages, clearAll }) => {
+const Cms = ({ gallery: { urls, loading }, getImages, clearAll }) => {
     useEffect(() => {
         getImages();
     }, []);
@@ -89,4 +89,4 @@ CMS.propTypes = {
     getImages: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, { getImages, clearAll })(CMS);
+export default connect(mapStateToProps, { getImages, clearAll })(Cms);
