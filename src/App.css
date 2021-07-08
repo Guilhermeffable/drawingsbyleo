@@ -236,6 +236,17 @@ html {
     .home-links {
         margin: auto;
     }
+
+    .modal-img {
+        align-items: center;
+        justify-self: center;
+        margin: auto;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -311,5 +322,21 @@ html {
         display: block;
         padding: 10px;
         margin-right: 5px;
+    }
+
+    .modal-img {
+        align-items: center;
+        justify-self: center;
+        margin: auto;
+        max-width: 75%;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about-picture {
+        width: 100%;
     }
 }

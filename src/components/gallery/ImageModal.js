@@ -40,7 +40,6 @@ const ImageModal = ({ url }) => {
                 className='drawing hoverable'
                 alt='Not found'
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.8 }}
             />
 
             <Modal
