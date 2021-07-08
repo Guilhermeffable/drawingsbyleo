@@ -80,11 +80,6 @@ const Navbar = ({ showHome }) => {
                         About
                     </Link>
                 </li>
-                <li>
-                    <Link to='/cms' className='black-text'>
-                        CMS
-                    </Link>
-                </li>
             </ul>
         </Fragment>
     );
