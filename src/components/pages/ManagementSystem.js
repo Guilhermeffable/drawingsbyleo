@@ -5,11 +5,6 @@ import { connect } from 'react-redux';
 import { getImages, clearAll } from '../../actions/galleryActions';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import {
-    AmplifySignIn,
-    AmplifyAuthenticator,
-    AmplifyGreetings
-} from '@aws-amplify/ui-react';
 
 const Cms = ({ gallery: { urls, loading }, getImages, clearAll }) => {
     useEffect(() => {
@@ -22,51 +17,7 @@ const Cms = ({ gallery: { urls, loading }, getImages, clearAll }) => {
         clearAll();
     };
 
-    return (
-        <AmplifyAuthenticator>
-            <AmplifySignIn slot='sign-in'>
-                <div slot='secondary-footer-content'></div>
-            </AmplifySignIn>
-
-            <div className='container'>
-                <AmplifyGreetings>
-                    <div slot='greetings-message' className='container'>
-                        Hello Nocas
-                    </div>
-                </AmplifyGreetings>
-                <div
-                    className='btn'
-                    style={{ backgroundColor: 'rgba(232, 185, 185)' }}
-                >
-                    <span onClick={onClearAll}>Clear All</span>
-                </div>
-                <div className='grid-2'>
-                    {(!loading && urls === null) ||
-                    (urls.length === 0 && urls.length === 0) ? (
-                        <h5>No images to show...</h5>
-                    ) : (
-                        <motion.ul className='collection' layout>
-                            {urls !== null &&
-                                urls.map((url) => (
-                                    <li
-                                        key={url.id}
-                                        className='collection-item'
-                                    >
-                                        <div>
-                                            <ImageItem data={url} />
-                                        </div>
-                                    </li>
-                                ))}
-                        </motion.ul>
-                    )}
-
-                    <div>
-                        <UploadForm />
-                    </div>
-                </div>
-            </div>
-        </AmplifyAuthenticator>
-    );
+    return <></>;
 };
 
 const mapStateToProps = (state) => ({

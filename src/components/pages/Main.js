@@ -6,6 +6,7 @@ import MyGallery from './MyGallery';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import { connect } from 'react-redux';
+import { Firebase } from '../../firebase/firebase';
 
 const Main = ({ gallery: { isHome } }) => {
     return (

@@ -1,3 +1,4 @@
+import { getImageUrl } from '../firebase/images.js';
 import {
     SHOW_HOME,
     HIDE_HOME,
@@ -8,7 +9,6 @@ import {
     DELETE_IMAGE,
     CLEAR_ALL
 } from './types.js';
-import { createDrawing, listDrawings, deleteDrawing } from '../aws/services';
 
 export const showHome = () => {
     return {
@@ -36,7 +36,6 @@ export const clearAll = () => {
 
 export const addImage = (file) => async (dispatch) => {
     try {
-        await createDrawing(file);
         dispatch({
             type: ADD_IMAGE
         });
@@ -48,10 +47,11 @@ export const addImage = (file) => async (dispatch) => {
 export const getImages = () => async (dispatch) => {
     try {
         setLoading();
-        const documents = await listDrawings();
+        const urls = await getImageUrl();
+
         dispatch({
             type: GET_IMAGES,
-            payload: documents
+            payload: urls
         });
     } catch (error) {
         console.error(error);
@@ -66,8 +66,6 @@ export const getImages = () => async (dispatch) => {
 export const deleteImage = (id) => async (dispatch) => {
     try {
         setLoading();
-
-        deleteDrawing(id);
 
         dispatch({
             type: DELETE_IMAGE,

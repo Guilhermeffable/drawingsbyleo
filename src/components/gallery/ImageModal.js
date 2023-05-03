@@ -41,7 +41,6 @@ const ImageModal = ({ url }) => {
                 alt='Not found'
                 whileHover={{ scale: 1.05 }}
             />
-
             <Modal
                 open={open}
                 onClose={handleClose}
