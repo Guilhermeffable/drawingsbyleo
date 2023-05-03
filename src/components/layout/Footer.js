@@ -60,12 +60,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-copyright'>
-                <div className='container'>
-                    © 2021 Copyright Guilherme Luís
-                    <a className='grey-text text-lighten-4 right' href='#!'>
-                        More Links
-                    </a>
-                </div>
+                <div className='container'>© 2023 Copyright Guilherme Luís</div>
             </div>
         </footer>
     );

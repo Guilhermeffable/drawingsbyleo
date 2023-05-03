@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { hideHome, showHome } from '../../actions/galleryActions';
+import { getImages, hideHome, showHome } from '../../actions/galleryActions';
 
 const Home = ({ hideHome, showHome }) => {
     useEffect(() => {
